@@ -17,7 +17,7 @@ module(..., package.seeall)
 --
 -- ==========================================================================================
 
-require("Json")
+json = require("json")
 
 local loadFileContents = function(file)
 	local path = system.pathForFile( file, system.ResourcesDirectory )
@@ -42,7 +42,7 @@ end
 
 local decodeJsonData = function(data)
 	if data then
-		return Json.Decode(data)
+		return json.decode(data)
 	end
 end
 
